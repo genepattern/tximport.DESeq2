@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Parameters",
+        "description": "",
+        "hidden": false,
+        "parameters": [
+            "Quantifications",
+            "Sample.Info",
+            "Quant.Type",
+            "Transcriptome.Database",
+            "Output.Normalized.Counts",
+            "Output.TPM",
+            "output.file.base"
+        ]
+    },
+    {
+        "name": "Advanced Parameters",
+        "description": "",
+        "hidden": false,
+        "parameters": [
+            "Reverse.Sign",
+            "Annotate.DEGs",
+            "Split.Identifiers",
+            "random.seed"
+        ]
+    }
+]
