@@ -157,7 +157,7 @@ p9_type=java.lang.String
 p9_value=TRUE\=TRUE;FALSE\=FALSE
 privacy=public
 quality=preproduction
-taskDoc=
+taskDoc=tximport.DESeq2.Normalize.pdf
 taskType=beta
 userid=acastanza
 version=
