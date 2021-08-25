@@ -224,8 +224,8 @@ if (opt$Sample.Info == "") {
   sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE, append = TRUE)
 }
 
-keep <- rowSums(counts(dds)) >= 1
-dds <- dds[keep, ]
+# keep <- rowSums(counts(dds)) >= 1
+# dds <- dds[keep, ]
 dds <- suppressMessages(suppressWarnings(estimateSizeFactors(dds)))
 normCounts <- suppressMessages(suppressWarnings(counts(dds, normalized = TRUE)))
 
