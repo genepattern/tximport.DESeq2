@@ -21,6 +21,7 @@
             "Reverse.Sign",
             "Annotate.DEGs",
             "Split.Identifiers",
+            "Min.Count.Filter",
             "random.seed"
         ]
     }

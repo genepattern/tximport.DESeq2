@@ -26,14 +26,19 @@ suppressMessages(suppressWarnings(library("optparse")))
 
 arguments <- commandArgs(trailingOnly = TRUE)
 
-option_list <- list(make_option("--quant", dest = "Quantifications"), make_option("--type",
- dest = "Quant.Type"), make_option("--txdb", dest = "Transcriptome.Database",
- default = NULL), make_option("--info", dest = "Sample.Info", default = NULL),
- make_option("--counts", dest = "Output.Normalized.Counts"), make_option("--tpm",
-  dest = "Output.TPM"), make_option("--basename", dest = "output.file.base"),
- make_option("--annotate", dest = "annotate"), make_option("--reverse", dest = "reverse"),
- make_option("--split", dest = "Split.Identifiers"), make_option("--seed", dest = "random.seed",
-  type = "integer", default = 779948241))
+option_list <- list(
+make_option("--quant", dest = "Quantifications"), 
+make_option("--type", dest = "Quant.Type"), 
+make_option("--txdb", dest = "Transcriptome.Database", default = NULL), 
+make_option("--info", dest = "Sample.Info", default = NULL), 
+make_option("--counts", dest = "Output.Normalized.Counts"), 
+make_option("--tpm", dest = "Output.TPM"), 
+make_option("--basename", dest = "output.file.base"), 
+make_option("--annotate", dest = "annotate"), 
+make_option("--reverse", dest = "reverse"), 
+make_option("--split", dest = "Split.Identifiers"), 
+make_option("--filter", dest = "filter", type = "integer", default = 1), 
+make_option("--seed", dest = "random.seed", type = "integer", default = 779948241))
 
 opt <- parse_args(OptionParser(option_list = option_list), positional_arguments = TRUE,
  args = arguments)$options
@@ -224,8 +229,11 @@ if (opt$Sample.Info == "") {
   sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE, append = TRUE)
 }
 
-# keep <- rowSums(counts(dds)) >= 1
-# dds <- dds[keep, ]
+if (as.integer(opt$filter) > 0) {
+ keep <- rowSums(counts(dds)) >= as.integer(opt$filter)
+ dds <- dds[keep, ]
+}
+
 dds <- suppressMessages(suppressWarnings(estimateSizeFactors(dds)))
 normCounts <- suppressMessages(suppressWarnings(counts(dds, normalized = TRUE)))
 
