@@ -1,5 +1,5 @@
 FROM jupyter/datascience-notebook:r-4.0.3
-MAINTAINER Edwin Juarez <ejuarez@ucsd.edu>
+MAINTAINER Anthony S. Castanza <acastanza@ucsd.edu>
 
 ENV LANG=C LC_ALL=C
 USER root
