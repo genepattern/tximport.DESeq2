@@ -22,5 +22,10 @@ RUN R -e 'BiocManager::install("rhdf5")'
 COPY module/* /build/
 RUN chmod a+x /build/tximport.normalize.R
 
+RUN R -e "sessionInfo()"
+RUN rm -rf /tmp/downloaded_packages/
+
+CMD ["Rscript", "--version"]
+
 # build using this:
 # docker build -t genepattern/tximport_deseq2:1.0 .
