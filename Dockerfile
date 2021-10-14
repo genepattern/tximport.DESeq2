@@ -20,7 +20,7 @@ RUN R -e 'BiocManager::install("rhdf5")'
 
 # copy module files
 COPY module/* /build/
-RUN chmod a+x /build/tximport.normalize.R
+RUN chmod a+x /build/tximport.deseq2.R
 
 RUN R -e "sessionInfo()"
 RUN rm -rf /tmp/downloaded_packages/
