@@ -194,7 +194,7 @@ if (opt$Sample.Info == "") {
 
   if (annotate == FALSE) {
     degmatrix <- as.data.frame(cbind(mat, results), stringsAsFactors = FALSE)
-    colnames(degmatrix)[1] <- "Gene_ID"
+    colnames(degmatrix)[1] <- "id"
     colnames(degmatrix)[2] <- "Details"
     degmatrix <- degmatrix[order(degmatrix$"BH adjusted p-values", decreasing = FALSE), ]
     suppressWarnings(write.table(degmatrix, paste0(outfile, ".Differential.Expression.txt"),
@@ -210,8 +210,9 @@ if (opt$Sample.Info == "") {
         all.x = FALSE, all.y = TRUE
       )
       degmatrix_ann <- degmatrix_ann[, -c(1)]
-      colnames(degmatrix_ann)[1] <- "Gene_Symbol"
-      colnames(degmatrix_ann)[2] <- "Gene_ID"
+      degmatrix_ann < -degmatrix_ann[,c(2,1,3:ncol(degmatrix_ann))]
+      colnames(degmatrix_ann)[1] <- "id"
+      colnames(degmatrix_ann)[2] <- "Gene_Symbol"
       colnames(degmatrix_ann)[3] <- "Gene_Details"
       degmatrix_ann <- degmatrix_ann[order(degmatrix_ann$"BH adjusted p-values",
         decreasing = FALSE
@@ -222,7 +223,7 @@ if (opt$Sample.Info == "") {
     } else {
       message("No GTF provided. Unable to annotate results with gene symbols.")
       degmatrix <- as.data.frame(cbind(mat, results), stringsAsFactors = FALSE)
-      colnames(degmatrix)[1] <- "Gene_ID"
+      colnames(degmatrix)[1] <- "id"
       colnames(degmatrix)[2] <- "Details"
       degmatrix <- degmatrix[order(degmatrix$"BH adjusted p-values", decreasing = FALSE), ]
       suppressWarnings(write.table(degmatrix, paste0(outfile, ".Differential.Expression.txt"),
