@@ -1,10 +1,10 @@
 ![](GPlogo.png)
 
-**tximport.DESeq2 Documentation**
+# tximport.DESeq2 Documentation 
 
 **Description:** Imports RNA-seq quantifications using the tximport package and outputs files for downstream analysis performing differential expression analysis if sample information is provided.
 
-**Author(s):** Charlotte Soneson (tximport), Mike Love (DESeq2). Wrapped as a module by Anthony S. Castanza, Mesirov Lab, UCSD School of Medicine.
+**Author(s):** Charlotte Soneson (tximport), Mike Love (DESeq2). <br> Wrapped as a module by Anthony S. Castanza, Mesirov Lab, UCSD School of Medicine.
 
 **Contact:** [genepattern.org/help](../genepattern.org/help)
 
