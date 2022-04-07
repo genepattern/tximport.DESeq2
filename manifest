@@ -7,7 +7,7 @@ categories=beta
 commandLine=<Rscript> <libdir>tximport.deseq2.R --quant\=<Quantifications> --type\=<Quant.Type> --txdb\=<Transcriptome.Database> --info\=<Sample.Info> --counts\=<Output.Normalized.Counts> --tpm\=<Output.TPM> --basename\=<output.file.base> --annotate\=<Annotate.DEGs> --reverse\=<Reverse.Sign> --split\=<Split.Identifiers>  --filter\=<Min.Count.Filter> --seed\=<random.seed>
 cpuType=any
 description=Imports RNA-seq quantifications from frequently used pipelines using the tximport package and outputs a DESeq2 "normalized counts" file in .GCT format suitable for use with GSEA, and/or a TPM .GCT suitable for ssGSEA.<br>\nIf a Sample Info file is provided containing assignments of samples to phenotypes, gene level differential expression will be calculated using DESeq2 for the two phenotypes.
-documentationUrl=https\://github.com/ACastanza/tximport.DESeq2/blob/main/docs/v1/tximport.DESeq2.pdf
+documentationUrl=https\://github.com/genepattern/tximport.DESeq2/blob/main/docs/v1/index.md
 fileFormat=cls;gct;txt
 job.docker.image=genepattern/tximport_deseq2\:1.0
 language=any
