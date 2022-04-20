@@ -1,4 +1,6 @@
+#updated after building 3.5
+#Wed, 20 Apr 2022 12:22:26 -0400
 #updated after building 0.2
 #Mon, 18 Apr 2022 12:36:35 -0400
 #prerelease version number
-prerelease.number=5
+prerelease.number=6
