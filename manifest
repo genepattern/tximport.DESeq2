@@ -97,7 +97,6 @@ p4_TYPE=FILE
 p4_default_value=
 p4_description=For Salmon/Sailfish/Kallisto data providing the transcriptome file used to quantify the data is required and must be provided in GTF/GFF3 format.
 This parameter is not utilized for RSEM data.\n<br/>\n(Supports gzip (.gz) files).\n<br/>\n
-p4_description=For Salmon/Sailfish/Kallisto the transcriptome used to quantify the data must be provided in GTF/GFF3 format.\n<br>\nSupports gzip (.gz) files.\n<br>\n<b>This parameter is ignored for RSEM data.</b>
 p4_fileFormat=gff3;gtf;gz
 p4_flag=--txdb
 p4_name=Transcriptome.Database
