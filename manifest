@@ -3,7 +3,7 @@
 JVMLevel=
 LSID=urn\:lsid\:8080.gpserver.ip-172-31-26-71.ip-172-31-26-71.ec2.internal\:genepatternmodules\:179\:3.2
 author=Anthony S. Castanza;UCSD-MesirovLab
-categories=beta
+categories=differential expression
 commandLine=<Rscript> <libdir>tximport.deseq2.R --quant\=<Quantifications> --type\=<Quant.Type> --txdb\=<Transcriptome.Database> --info\=<Sample.Info> --counts\=<Output.Normalized.Counts> --tpm\=<Output.TPM> --basename\=<output.file.base> --annotate\=<Annotate.DEGs> --reverse\=<Reverse.Sign> --split\=<Split.Identifiers>  --filter\=<Min.Count.Filter> --seed\=<random.seed>
 cpuType=any
 description=Imports RNA-seq quantifications from frequently used pipelines using the tximport package and outputs a DESeq2 "normalized counts" file in .GCT format suitable for use with GSEA, and/or a TPM .GCT suitable for ssGSEA.<br>\nIf a Sample Info file is provided containing assignments of samples to phenotypes, gene level differential expression will be calculated using DESeq2 for the two phenotypes.
@@ -100,7 +100,7 @@ p4_fileFormat=gff3;gtf;gz
 p4_flag=--txdb
 p4_name=Transcriptome.Database
 p4_numValues=0..1
-p4_optional=
+p4_optional=on
 p4_prefix=
 p4_prefix_when_specified=
 p4_type=java.io.File
@@ -173,6 +173,6 @@ p9_value=TRUE\=TRUE;FALSE\=FALSE
 privacy=public
 quality=preproduction
 taskDoc=tximport.DESeq2.pdf
-taskType=beta
+taskType=differential expression
 userid=acastanza
 version=
