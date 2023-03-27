@@ -210,7 +210,7 @@ if (opt$Sample.Info == "") {
         all.x = FALSE, all.y = TRUE
       )
       degmatrix_ann <- degmatrix_ann[, -c(1)]
-      degmatrix_ann < -degmatrix_ann[,c(2,1,3:ncol(degmatrix_ann))]
+      degmatrix_ann <- degmatrix_ann[,c(2,1,3:ncol(degmatrix_ann))]
       colnames(degmatrix_ann)[1] <- "Gene_ID"
       colnames(degmatrix_ann)[2] <- "Gene_Symbol"
       colnames(degmatrix_ann)[3] <- "Gene_Details"
