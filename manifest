@@ -1,7 +1,7 @@
 #tximport.DESeq2.Normalize
 #Mon Nov 23 22:31:05 UTC 2020
 JVMLevel=
-LSID=urn\:lsid\:8080.gpserver.ip-172-31-26-71.ip-172-31-26-71.ec2.internal\:genepatternmodules\:179\:3.2
+LSID=urn\:lsid\:genepattern.org\:module.analysis\:00422\:4
 author=Anthony S. Castanza;UCSD-MesirovLab
 categories=differential expression
 commandLine=<Rscript> <libdir>tximport.deseq2.R --quant\=<Quantifications> --type\=<Quant.Type> --txdb\=<Transcriptome.Database> --info\=<Sample.Info> --counts\=<Output.Normalized.Counts> --tpm\=<Output.TPM> --basename\=<output.file.base> --annotate\=<Annotate.DEGs> --reverse\=<Reverse.Sign> --split\=<Split.Identifiers>  --filter\=<Min.Count.Filter> --seed\=<random.seed>
